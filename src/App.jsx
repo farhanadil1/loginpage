@@ -4,10 +4,11 @@ function App() {
   const [showLogin, setShowLogin] = useState(true); // State to toggle between login and signup
 
   return (
-    <div className="h-full w-full">
+    <div className="h-[577px] w-full bg-gradient-to-br from-slate-200 to-slate-100">
+      <div className='h-[450px] flex justify-center rounded-2xl drop-shadow-2xl transform transition-all duration-500'>
       {showLogin ? (
         // Login Card
-        <div className="bg-gray-200 h-[450px] mx-52 my-16 flex justify-center rounded-2xl drop-shadow-2xl">
+        <div className="relative bg-white h-[450px] mx-52 my-16 flex justify-center rounded-2xl drop-shadow-2xl">
           <div className="h-full w-[50%] bg-blue-400 rounded-l-2xl rounded-r-[150px]">
             <div className="flex justify-center mt-36 text-[40px] font-medium text-white ">
               Hello, Welcome!
@@ -24,7 +25,7 @@ function App() {
               </button>
             </div>
           </div>
-          <div className="h-full w-[50%] bg-gray-200 rounded-r-2xl">
+          <div className="h-full w-[50%] bg-white rounded-r-2xl">
             <div className="flex justify-center mt-10 text-[32px] font-medium text-black">
               Login
             </div>
@@ -32,7 +33,7 @@ function App() {
               <input
                 placeholder="Username or Email"
                 required
-                className="focus:border-blue-400 focus:border-2 focus:outline-none px-3 rounded-[8px] w-[350px] h-8 enabled:border-blue-300"
+                className="bg-gray-200 focus:border-blue-400 focus:border-2 focus:outline-none px-3 rounded-[8px] w-[350px] h-8 enabled:border-blue-300"
               />
             </div>
             <div className="flex justify-center mt-8 ">
@@ -40,7 +41,7 @@ function App() {
                 placeholder="Enter your password"
                 type="password"
                 required
-                className="relative focus:border-blue-400 focus:border-2 focus:outline-none px-3 rounded-[8px] w-[350px] h-8 enabled:border-blue-300"
+                className="relative bg-gray-200 focus:border-blue-400 focus:border-2 focus:outline-none px-3 rounded-[8px] w-[350px] h-8 enabled:border-blue-300"
               />
 
             </div>
@@ -67,30 +68,32 @@ function App() {
             </div>
           </div>
         </div>
+        
+        
       ) : (
         // Signup Card
-        <div className="bg-gray-200 h-[450px] mx-52 my-16 flex justify-center rounded-2xl drop-shadow-2xl">
-          <div className="h-full w-[50%] bg-gray-200 rounded-l-2xl">
+        <div className="bg-white h-[450px] mx-52 my-16 flex justify-center rounded-2xl drop-shadow-2xl">
+          <div className="h-full w-[50%] bg-white rounded-l-2xl">
             <div className="flex justify-center mt-6 text-[32px] font-medium text-black">
               Registration
             </div>
             <div className="flex justify-center mt-8">
               <input
                 placeholder="Enter your name"
-                className="focus:border-blue-400 focus:border-2 focus:outline-none px-3 rounded-[8px] w-[350px] h-8 enabled:border-blue-300"
+                className="bg-gray-200 focus:border-blue-400 focus:border-2 focus:outline-none px-3 rounded-[8px] w-[350px] h-8 enabled:border-blue-300"
               />
             </div>
             <div className="flex justify-center mt-8">
               <input
                 placeholder="Enter your @email"
-                className="focus:border-blue-400 focus:border-2 focus:outline-none px-3 rounded-[8px] w-[350px] h-8 enabled:border-blue-300"
+                className="bg-gray-200 focus:border-blue-400 focus:border-2 focus:outline-none px-3 rounded-[8px] w-[350px] h-8 enabled:border-blue-300"
               />
             </div>
             <div className="flex justify-center mt-8">
               <input
                 placeholder="Enter your password"
                 type="password"
-                className="focus:border-blue-400 focus:border-2 focus:outline-none px-3 rounded-[8px] w-[350px] h-8 enabled:border-blue-300"
+                className="bg-gray-200 focus:border-blue-400 focus:border-2 focus:outline-none px-3 rounded-[8px] w-[350px] h-8 enabled:border-blue-300"
               />
             </div>
             <div className="flex justify-center mt-8">
@@ -99,7 +102,7 @@ function App() {
               </button>
             </div>
             <div className='flex justify-center mt-2 font-medium text-[14px]'>or Signup with social platforms</div>
-            <div className='flex space-x-[-14px] mt-4 mx-16 '>
+            <div className='flex space-x-[-12px] mt-4 mx-16 '>
               <div className='hover:scale-110 transition-transform duration-300 hover:drop-shadow-lg'><a href="https://myaccount.google.com/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 102 102">
   <path fill="#f5bc00" d="M43.6,20.1H42V20H24v8h11.3c-1.6,4.7-6.1,8-11.3,8c-6.6,0-12-5.4-12-12s5.4-12,12-12c3.1,0,5.8,1.2,8,3l5.7-5.7	C34,6.1,29.3,4,24,4C13,4,4,13,4,24s9,20,20,20s20-9,20-20C44,22.7,43.9,21.4,43.6,20.1z"></path><path fill="#6c19ff" d="M43.6,20.1L43.6,20.1L42,20H24v8h11.3c-0.8,2.2-2.2,4.2-4.1,5.6c0,0,0,0,0,0l6.2,5.2C37,39.2,44,34,44,24	C44,22.7,43.9,21.4,43.6,20.1z"></path><path fill="#3ddab4" d="M24,44c5.2,0,9.9-2,13.4-5.2l-6.2-5.2c-2,1.5-4.5,2.4-7.2,2.4c-5.2,0-9.6-3.3-11.3-7.9l-6.5,5	C9.5,39.6,16.2,44,24,44z"></path><path fill="#f55376" d="M6.3,14.7l6.6,4.8C14.7,15.1,19,12,24,12c3.1,0,5.8,1.2,8,3l5.7-5.7C34,6.1,29.3,4,24,4	C16.3,4,9.7,8.3,6.3,14.7z"></path><path fill="#2100c4" d="M26.6,35.7l6.8,6c1.5-0.8,2.9-1.8,4.1-2.9l-6.2-5.2C29.9,34.6,28.3,35.3,26.6,35.7z"></path><path fill="#eb0000" d="M9.2,10.6c-1.1,1.2-2.1,2.6-2.9,4.1l3.9,2.9l2.6,1.9c0.6-1.6,1.6-3,2.8-4.1L9.2,10.6z"></path>
   </svg></a></div>
@@ -131,9 +134,12 @@ function App() {
               </button>
             </div>
           </div>
-        </div>
+          </div>
+        
       )}
     </div>
+    </div>
+  
   );
 }
 
